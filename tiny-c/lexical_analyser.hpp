@@ -4,6 +4,12 @@
 #include <vector>
 #include <ostream>
 
+enum class LexicalError : uint8_t
+{
+	InvalidSymbol,            //file, line, col_range
+	LeadingZeroesInNumber     //file, line, col_range
+};
+
 enum class LexicalTokenType : uint8_t
 {
 	Name, Number, Operator
